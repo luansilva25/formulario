@@ -16,7 +16,7 @@
 import { ref, watch  } from 'vue';
 import senha from './login-components/senha.vue';
 import username from './login-components/username.vue';
-import { Login } from '@/api/login';
+import { Login } from '../api/login';
 import axios from 'axios';
 
     const emit = defineEmits(['criar'])

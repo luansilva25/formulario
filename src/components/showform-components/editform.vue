@@ -25,11 +25,11 @@
     </div>
 </template>
 <script setup>
-import { atualizar } from '@/api/atualizar';
-import { Estados } from '@/api/estados';
-import { Hobbies } from '@/api/hobby';
-import { Linguagens } from '@/api/linguagem';
-import { Login } from '@/api/login'
+import { atualizar } from '../api/atualizar';
+import { Estados } from '../api/estados';
+import { Hobbies } from '../api/hobby';
+import { Linguagens } from '../api/linguagem';
+import { Login } from '../api/login'
 import { computed, onMounted, ref,} from 'vue';
 
 const store = Login();

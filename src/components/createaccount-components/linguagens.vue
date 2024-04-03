@@ -3,7 +3,7 @@
     :items="linguagensprogramacao" v-model="linguagemselecionada" :rules="linguagensvalidation" multiple chips hide-selected closable-chips></VSelect>
 </template>
 <script setup>
-import { Linguagens } from '@/api/linguagem';
+import { Linguagens } from '../api/linguagem';
 import { computed, onMounted, ref, watch } from 'vue';
 
 

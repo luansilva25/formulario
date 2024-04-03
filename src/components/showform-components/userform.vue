@@ -23,7 +23,7 @@
 </template>
 <script setup>
     import { computed } from "vue";
-    import { Login } from "@/api/login";
+    import { Login } from "../api/login";
 
 
 const store = Login();

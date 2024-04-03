@@ -4,7 +4,7 @@
     multiple chips :rules="hobbyvalidation" hide-selected closable-chips></VSelect>
 </template>
 <script setup>
-import { Hobbies } from '@/api/hobby';
+import { Hobbies } from '../api/hobby';
 import { computed, onMounted, ref, watch } from 'vue';
 const hobbyselecionado = ref(null)
 const store = Hobbies()

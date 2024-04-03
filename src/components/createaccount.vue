@@ -34,7 +34,7 @@ import hobbies from "./createaccount-components/hobbies.vue";
 import linguagens from "./createaccount-components/linguagens.vue";
 import biografia from "./createaccount-components/biografia.vue";
 import { ref } from "vue";
-import { CreateUser } from "@/api/criarconta";
+import { CreateUser } from "../api/criarconta";
 const emit = defineEmits(["login"]);
 const createuser = CreateUser()
 const emaildousuario = ref(null);
