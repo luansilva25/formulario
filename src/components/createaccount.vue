@@ -131,10 +131,14 @@ async function criarconta() {
       biografia: userbiografia.value,
     };
     const create = createuser.addform(formuser)
+    alert('conta criada com sucesso, faça o login')
     emit('login')
     console.log(formuser)
     console.log(create)
     
+  }
+  else{
+    console.log(emailvalid.value, nomevalid.value, usersenhavalid.value,confirmsenhavalid.value, datavalid.value, userhobbyvalid.value, enderecovalid.value, cidadevalid.value, biografiavalid.value, linguagemvalid.value)
   }
 }
 </script>

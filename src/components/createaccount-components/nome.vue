@@ -21,8 +21,9 @@ import { ref, watch } from 'vue';
         const response = await axios.get("https://backend-do-formulario.onrender.com/form/")
         
         if(response.status === 200){
-            const data = response.data
-            finduser.value = data.find(user => user.nome === nome)
+            const data = await response.data
+            const finduserfunc = data.find(user => user.nome === nome.toLowerCase())
+            finduser.value = finduserfunc
             console.log(finduser.value)
         } 
     }
@@ -36,6 +37,8 @@ import { ref, watch } from 'vue';
         else{
             valid.value = false
         }
+
+        console.log(finduser.value)
    })
 
    

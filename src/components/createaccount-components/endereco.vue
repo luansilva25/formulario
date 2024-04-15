@@ -9,7 +9,7 @@
 </template>
 <script setup>
 import { computed, onMounted, ref, watch} from 'vue';
-import { Estados } from '../api/estados';
+import { Estados } from '@/api/estados';
 
 const store = Estados()
 

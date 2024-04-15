@@ -2,13 +2,13 @@
     <div>
       <VCard v-for="data in userform" :key="data.id" width="600" class="pa-5">
         <h1 class="text-center">formulario de edição</h1>
-        <VTextField label="nome" v-model="data.nome" disabled></VTextField>
+        <VTextField label="nome" v-model="data.nome"></VTextField>
         <VTextField label="email" v-model="data.email" @input="emailverification(data.email)" :rules="emailvalidation"></VTextField>
       <div class="d-flex justify-center align-center ga-5">
         <VTextField label="senha" v-model="data.senha" @input="senhaverification(data.senha)" :rules="senhavalidation"></VTextField>
         <VTextField label="confirmação de senha" v-model="confirm" @input="confirmverification(data.senha)" :rules="confirmvalidation"></VTextField>
       </div>
-      <VTextField label="nascimento" type="data" v-model="data.nascimento" disabled></VTextField>
+      <VTextField label="nascimento" type="data" v-model="data.nascimento" ></VTextField>
       <div class="d-flex justify-center align-center ga-5">
         <VTextField label="endereco" v-model="data.endereco" @input="enderecoverification(data.endereco)" :rules="enderecovalidation"></VTextField>
         <VTextField label="cidade" v-model="data.cidade" @input="cidadeverification(data.cidade)" :rules="cidadevalidation"></VTextField>
@@ -25,11 +25,11 @@
     </div>
 </template>
 <script setup>
-import { atualizar } from '../api/atualizar';
-import { Estados } from '../api/estados';
-import { Hobbies } from '../api/hobby';
-import { Linguagens } from '../api/linguagem';
-import { Login } from '../api/login'
+import { atualizar } from '@/api/atualizar';
+import { Estados } from '@/api/estados';
+import { Hobbies } from '@/api/hobby';
+import { Linguagens } from '@/api/linguagem';
+import { Login } from '@/api/login'
 import { computed, onMounted, ref,} from 'vue';
 
 const store = Login();
