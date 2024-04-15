@@ -19,11 +19,11 @@ let ano = data.getFullYear()
 const nascimentovalidation = [
   (value) => !!value || 'preencha esse campo',
   (value) => new Date(value) < data  || 'data invalida',
-  (value) => ano - new Date(value).getFullYear() >= 15 || 'voce precisa ter 15 anos ou mais'
+  (value) => (ano - new Date(value).getFullYear() >= 1 && ano - new Date(value).getFullYear() <= 110) || 'para preencher esse formulario voce deve estar vivo (obrigatório)'
 ]
 
 watch(nascimento, (nascimento) =>{
-  if(nascimento && new Date(nascimento) < data && ano - new Date(nascimento).getFullYear() >= 15){
+  if(nascimento && new Date(nascimento) < data && (ano - new Date(nascimento).getFullYear() >= 1 && ano - new Date(nascimento).getFullYear <= 110)){
       valid.value = true
   }
   else{
